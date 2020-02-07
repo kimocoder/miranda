@@ -1,0 +1,24 @@
+miranda (1.0-1kali3) kali-dev; urgency=medium
+
+  * Drop useless dependency on libreadline6
+
+ -- Sophie Brun <sophie@freexian.com>  Mon, 23 Jan 2017 14:25:03 +0100
+
+miranda (1.0-1kali2) kali-dev; urgency=medium
+
+  * Drop dependency on python-support (obsolete package)
+  * Use debhelper 9
+
+ -- Sophie Brun <sophie@freexian.com>  Thu, 28 Jan 2016 14:35:16 +0100
+
+miranda (1.0-1kali1) kali; urgency=low
+
+  * Updated watch file
+
+ -- Mati Aharoni <muts@kali.org>  Sun, 12 Jan 2014 19:18:51 -0500
+
+miranda (1.0-1kali0) kali; urgency=low
+
+  * Initial release 
+
+ -- Devon Kearns <dookie@kali.org>  Wed, 09 Jan 2013 09:06:52 -0700

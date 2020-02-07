@@ -1,0 +1,3 @@
+version=3
+
+https://code.google.com/p/mirandaupnptool/downloads/list .*/miranda-(\d[\d.]*)\.(?:tgz|tbz2|txz|tar\.gz|tar\.bz2|tar\.xz)

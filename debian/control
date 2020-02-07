@@ -1,0 +1,19 @@
+Source: miranda
+Section: net
+Priority: extra
+Maintainer: Kali Developers <devel@kali.org>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.3
+Homepage: http://code.google.com/p/mirandaupnptool/
+Vcs-Git: https://gitlab.com/kalilinux/packages/miranda.git
+Vcs-Browser: https://gitlab.com/kalilinux/packages/miranda
+
+Package: miranda
+Architecture: all
+Depends: ${misc:Depends}, python, python-jsonpickle
+Description: UPNP administration tool
+ Miranda is a Python-based Universal Plug-N-Play client 
+ application designed to discover, query and interact with 
+ UPNP devices, particularly Internet Gateway Devices (aka, 
+ routers). It can be used to audit UPNP-enabled devices on a 
+ network for possible vulnerabilities.
