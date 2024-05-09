@@ -192,7 +192,7 @@ class upnp:
 		#Split the host and page
 		try:
 			(host,page) = url.split(delim)[1].split('/',1)
-			page = '/' + page
+			page = f'/{page}'
 		except:
 			#If '://' is not in the url, then it's not a full URL, so assume that it's just a relative path
 			page = url
@@ -203,9 +203,9 @@ class upnp:
 	#The device type string looks like: 'urn:schemas-upnp-org:device:WANDevice:1'
 	def parseDeviceTypeName(self,string):
 		delim1 = 'device:'
-		delim2 = ':'
-
 		if delim1 in string and not string.endswith(delim1):
+			delim2 = ':'
+
 			return string.split(delim1)[1].split(delim2,1)[0]
 		return False
 
@@ -213,9 +213,9 @@ class upnp:
 	#The service type string looks like: 'urn:schemas-upnp-org:service:Layer3Forwarding:1'
 	def parseServiceTypeName(self,string):
 		delim1 = 'service:'
-		delim2 = ':'
-
 		if delim1 in string and not string.endswith(delim1):
+			delim2 = ':'
+
 			return string.split(delim1)[1].split(delim2,1)[0]
 		return False
 
@@ -240,8 +240,8 @@ class upnp:
 
 	#Extract the contents of a single XML tag from the data
 	def extractSingleTag(self,data,tag):
-		startTag = "<%s" % tag
-		endTag = "</%s>" % tag
+		startTag = f"<{tag}"
+		endTag = f"</{tag}>"
 
 		try:
 			tmp = data.split(startTag)[1]
@@ -1555,10 +1555,7 @@ def parseCliOpts(argc,argv,hp):
 
 #Toggle boolean values
 def toggleVal(val):
-	if val:
-		return False
-	else:
-		return True
+	return not val
 
 #Prompt for user input
 def getUserInput(hp,shellPrompt):
